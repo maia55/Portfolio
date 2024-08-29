@@ -4,60 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Black - Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff007f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .skills, .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skill, .project {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            width: 45%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Nova Black - Personal Portfolio</h1>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>Nova Black</h1>
-            <nav>
-                <ul class="tabs">
-                    <li><a href="#home" class="tab-link" onclick="showTab(event, 'home')">Home</a></li>
-                    <li><a href="#about" class="tab-link" onclick="showTab(event, 'about')">About</a></li>
-                    <li><a href="#projects" class="tab-link" onclick="showTab(event, 'projects')">Projects</a></li>
-                    <li><a href="#contact" class="tab-link" onclick="showTab(event, 'contact')">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Nova Black. I'm a [Your Profession] with a passion for [Your Interests]. I specialize in [Your Specialization] and have experience in [Your Experience].</p>
+        </section>
 
-        <main>
-            <div id="home" class="tab-content">
-                <h2>Welcome to My Portfolio</h2>
-                <p>This is the home section where you can introduce yourself and your work.</p>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Skill 1</h3>
+                    <p>Description of skill 1.</p>
+                </div>
+                <div class="skill">
+                    <h3>Skill 2</h3>
+                    <p>Description of skill 2.</p>
+                </div>
+                <!-- Add more skills as needed -->
             </div>
+        </section>
 
-            <div id="about" class="tab-content" style="display:none;">
-                <h2>About Me</h2>
-                <p>Include a brief bio and information about your background.</p>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2.</p>
+                </div>
+                <!-- Add more projects as needed -->
             </div>
+        </section>
 
-            <div id="projects" class="tab-content" style="display:none;">
-                <h2>Projects</h2>
-                <p>Showcase your projects or work samples here.</p>
-            </div>
-
-            <div id="contact" class="tab-content" style="display:none;">
-                <h2>Contact Me</h2>
-                <p>Provide contact information or a form for visitors to reach you.</p>
-            </div>
-        </main>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
     </div>
 
-    <script>
-        function showTab(event, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tab-link");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.className += " active";
-        }
-    </script>
+    <footer>
+        <p>&copy; 2024 Nova Black. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 
